@@ -46,7 +46,7 @@
 </head>
 <body>
     <div class="login-container">
-        <img src="{{ url_for(\'static\', filename=\'logo.png\') }}" alt="Logo ZAR">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo ZAR">
         <h2>Área Administrativa</h2>
         {% with messages = get_flashed_messages(with_categories=true) %}
           {% if messages %}
