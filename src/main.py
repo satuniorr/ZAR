@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # --- Configuração Inicial ---
-app = Flask(__name__, template_folder="../templates", static_folder="../static")
+app = Flask(__name__)
 app.secret_key = os.urandom(24)
 BASE_DIR = '/home/ubuntu/zar_app'
 DATABASE = os.path.join(BASE_DIR, 'database.db')
