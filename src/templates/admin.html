@@ -128,7 +128,7 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="{{ url_for(\'static\', filename=\'logo.png\') }}" alt="Logo ZAR">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo ZAR">
                 ZAR Admin
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -137,7 +137,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for(\'logout\') }}"><i class="bi bi-box-arrow-right"></i> Sair</a>
+                        <a class="nav-link" href="{{ url_for('logout') }}"><i class="bi bi-box-arrow-right"></i> Sair</a>
                     </li>
                 </ul>
             </div>
