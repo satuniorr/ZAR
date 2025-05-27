@@ -200,7 +200,7 @@
                         <div class="card">
                             <div class="card-header">Total de Solicitações</div>
                             <div class="card-body">
-                                <h5 class="card-title">{{ data.get(\'total_solicitacoes\', \'N/A\') }}</h5>
+                                <h5 class="card-title">{{ data.get('total_solicitacoes', 'N/A') }}</h5>
                             </div>
                         </div>
                     </div>
@@ -208,7 +208,7 @@
                         <div class="card">
                             <div class="card-header">Total Comprado (Aprovado)</div>
                             <div class="card-body">
-                                <h5 class="card-title">R$ {{ "{:.2f}".format(data.get(\'total_compras\', 0)).replace(\".\", \",\") }}</h5>
+                                <h5 class="card-title">R$ {{ "{:.2f}".format(data.get('total_compras', 0)).replace(\".\", \",\") }}</h5>
                             </div>
                         </div>
                     </div>
@@ -222,8 +222,8 @@
                             <div class="card-header">Solicitações por Comprador</div>
                             <div class="card-body">
                                 <!-- Gráfico ou Tabela aqui -->
-                                <p>Miriam: {{ data.get(\'por_comprador\', {}).get(\'Miriam\', 0) }}</p>
-                                <p>Irineu: {{ data.get(\'por_comprador\', {}).get(\'Irineu\', 0) }}</p>
+                                <p>Miriam: {{ data.get('por_comprador', {}).get('Miriam', 0) }}</p>
+                                <p>Irineu: {{ data.get('por_comprador', {}).get('Irineu', 0) }}</p>
                             </div>
                         </div>
                     </div>
@@ -232,7 +232,7 @@
                             <div class="card-header">Solicitações por Etapa</div>
                             <div class="card-body">
                                 <!-- Gráfico ou Tabela aqui -->
-                                {% for etapa, count in data.get(\'por_etapa\', {}).items() %}
+                                {% for etapa, count in data.get('por_etapa', {}).items() %}
                                     <p>{{ etapa }}: {{ count }}</p>
                                 {% endfor %}
                             </div>
@@ -255,7 +255,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {% for item in data.get(\'atrasadas_cotacao\', []) %}
+                                    {% for item in data.get('atrasadas_cotacao', []) %}
                                     <tr>
                                         <td>{{ item.Solicitacao }}</td>
                                         <td>{{ item.Etapa }}</td>
@@ -286,12 +286,12 @@
                 <div class="card">
                     <div class="card-header">Outros Indicadores</div>
                     <div class="card-body">
-                        <p><strong>Lead Time Médio de Compra:</strong> {{ data.get(\'lead_time_compra_medio\', \'N/A\') }} dias</p>
-                        <p><strong>Lead Time Médio de Entrega:</strong> {{ data.get(\'lead_time_entrega_medio\', \'N/A\') }} dias</p>
-                        <p><strong>Atraso Médio na Entrega:</strong> {{ data.get(\'atraso_entrega_medio\', \'N/A\') }} dias</p>
+                        <p><strong>Lead Time Médio de Compra:</strong> {{ data.get('lead_time_compra_medio', 'N/A') }} dias</p>
+                        <p><strong>Lead Time Médio de Entrega:</strong> {{ data.get('lead_time_entrega_medio', 'N/A') }} dias</p>
+                        <p><strong>Atraso Médio na Entrega:</strong> {{ data.get('atraso_entrega_medio', 'N/A') }} dias</p>
                         <p><strong>Desempenho por Comprador (Total Comprado):</strong></p>
                         <ul>
-                         {% for comp, valor in data.get(\'desempenho_comprador\', {}).items() %}
+                         {% for comp, valor in data.get('desempenho_comprador', {}).items() %}
                             <li>{{ comp }}: R$ {{ "{:.2f}".format(valor).replace(\".\", \",\") }}</li>
                          {% endfor %}
                         </ul>
