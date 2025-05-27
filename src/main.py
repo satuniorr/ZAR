@@ -119,9 +119,7 @@ def init_db(force_create=False):
                     DtAprovSol TEXT,
                     Comprador TEXT,
                     Fornec TEXT,
-                    Produto TEXT,
                 
-                    Preço Unitario REAL,
                    
                     Vlr total REAL,
                     Entrega TEXT, 
